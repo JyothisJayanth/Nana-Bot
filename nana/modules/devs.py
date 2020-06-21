@@ -11,7 +11,7 @@ from pyrogram import Filters
 from speedtest import Speedtest
 import pyrogram as p
 
-from nana import Command, logging, app, DB_AVAIABLE, USERBOT_VERSION, ASSISTANT_VERSION
+from nana import Command, logging, app, DB_AVAILABLE, USERBOT_VERSION, ASSISTANT_VERSION
 from nana.helpers.deldog import deldog
 from nana.helpers.parser import mention_markdown
 
@@ -207,7 +207,7 @@ async def dc_id(_client, message):
 @app.on_message(Filters.me & Filters.command(["repo"], Command))
 async def repo(_client, message):
     await message.edit(
-        "Click [here](https://github.com/pokurt/Nana-Bot) for Nana-Bot-Remix Source.\nClick [here](https://github.com/legenhand/Nana-Bot) to open Nana-Bot GitHub page.\nClick [here](https://t.me/nanabotsupport) for support Group",
+        "Click [here](https://github.com/legenhand/Nana-Bot) for Nana-Bot-Remix Source.\nClick [here](https://github.com/legenhand/Nana-Bot) to open Nana-Bot GitHub page.\nClick [here](https://t.me/nanabotsupport) for support Group",
         disable_web_page_preview=True)
 
 
@@ -224,7 +224,7 @@ async def alive(_client, message):
     else:
         text += "-> Userbot: `Running (v{})`\n".format(USERBOT_VERSION)
     text += "-> Assistant: `Running (v{})`\n".format(ASSISTANT_VERSION)
-    text += "-> Database: `{}`\n".format(DB_AVAIABLE)
+    text += "-> Database: `{}`\n".format(DB_AVAILABLE)
     text += "-> Python: `{}`\n".format(python_version())
     text += "-> Pyrogram: `{}`\n".format(p.__version__)
     if not me:
